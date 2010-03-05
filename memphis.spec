@@ -21,7 +21,7 @@ Buildrequires: glib2-devel
 Buildrequires: libcairo-devel
 Buildrequires: libexpat-devel
 Buildrequires: gobject-introspection-devel
-#Buildrequires: gtk-doc
+Buildrequires: gtk-doc
 
 %description
 Memphis is a map-rendering application and a library for OpenStreetMap
