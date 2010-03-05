@@ -1,8 +1,8 @@
 %define name memphis
-%define version 0.1.0
+%define version 0.2.0
 %define release %mkrel 1
 
-%define api 0.1
+%define api 0.2
 %define major 0
 %define libname %mklibname %name %api %major
 %define develname %mklibname -d %name
@@ -12,7 +12,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://wenner.ch/files/public/mirror/memphis/%{name}-%{version}.tar.gz
-Patch: memphis-0.1.0-fix-linking.patch
+Patch: memphis-0.2.0-fix-linking.patch
 License: LGPLv2+
 Group: System/Libraries
 Url: https://trac.openstreetmap.ch/trac/memphis/
@@ -20,6 +20,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Buildrequires: glib2-devel
 Buildrequires: libcairo-devel
 Buildrequires: libexpat-devel
+Buildrequires: gobject-introspection-devel
 #Buildrequires: gtk-doc
 
 %description
@@ -91,6 +92,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README AUTHORS ChangeLog
 %_libdir/libmemphis-%api.so.%{major}*
+%_libdir/girepository-1.0/Memphis-%api.typelib
 
 %files -n %develname
 %defattr(-,root,root)
@@ -99,4 +101,5 @@ rm -rf %{buildroot}
 %_libdir/libmemphis-%api.so
 %_includedir/libmemphis-%api/
 %_libdir/pkgconfig/memphis-%api.pc
-
+%_datadir/gtk-doc/html/libmemphis
+%_datadir/gir-1.0/Memphis-%api.gir
