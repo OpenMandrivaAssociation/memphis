@@ -1,5 +1,5 @@
 %define name memphis
-%define version 0.2.0
+%define version 0.2.1
 %define release %mkrel 1
 
 %define api 0.2
@@ -12,7 +12,6 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://wenner.ch/files/public/mirror/memphis/%{name}-%{version}.tar.gz
-Patch: memphis-0.2.0-fix-linking.patch
 License: LGPLv2+
 Group: System/Libraries
 Url: https://trac.openstreetmap.ch/trac/memphis/
@@ -70,11 +69,11 @@ Features:
 
 %prep
 %setup -q
-%patch -p1
-libtoolize --install --force
-aclocal
-autoconf
-automake
+%apply_patches
+# libtoolize --install --force
+# aclocal
+# autoconf
+# automake
 
 %build
 %configure2_5x
