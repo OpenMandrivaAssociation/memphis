@@ -1,5 +1,5 @@
 %define name memphis
-%define version 0.2.1
+%define version 0.2.3
 %define release %mkrel 1
 
 %define api 0.2
@@ -36,6 +36,7 @@ Features:
 %package -n %libname
 Summary: Map rendering library
 Group: System/Libraries
+Requires: %name >= %version
 
 %description -n %libname
 Libmemphis is a map-rendering library for OpenStreetMap
@@ -86,6 +87,10 @@ rm -f %buildroot%_libdir/lib*.a
 
 %clean
 rm -rf %{buildroot}
+
+%files
+%defattr(-,root,root)
+%_datadir/%name
 
 %files -n %libname
 %defattr(-,root,root)
