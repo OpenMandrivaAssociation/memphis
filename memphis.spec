@@ -1,6 +1,6 @@
 %define name memphis
 %define version 0.2.3
-%define release %mkrel 3
+%define release %mkrel 4
 
 %define api 0.2
 %define major 0
