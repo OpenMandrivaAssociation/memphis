@@ -12,11 +12,11 @@ Group: System/Libraries
 Url: https://trac.openstreetmap.ch/trac/memphis/
 Source0: http://wenner.ch/files/public/mirror/memphis/%{name}-%{version}.tar.gz
 
-Buildrequires: glib2-devel
-Buildrequires: libcairo-devel
-Buildrequires: libexpat-devel
-Buildrequires: gobject-introspection-devel
 Buildrequires: gtk-doc
+Buildrequires: expat-devel
+Buildrequires: pkgconfig(cairo)
+Buildrequires: pkgconfig(glib-2.0)
+Buildrequires: pkgconfig(gobject-introspection-1.0)
 
 %description
 Memphis is a map-rendering application and a library for OpenStreetMap
