@@ -103,3 +103,53 @@ rm -f %{buildroot}%{_libdir}/*.la
 %{_includedir}/lib%{name}-%{api}/
 %{_libdir}/pkgconfig/%{name}-%{api}.pc
 %{_datadir}/gir-1.0/Memphis-%{gir_major}.gir
+
+
+%changelog
+* Wed May 02 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.2.3-6
++ Revision: 795050
+- rel bump
+
+* Fri Dec 09 2011 Matthew Dawkins <mattydaw@mandriva.org> 0.2.3-5
++ Revision: 739567
+- converted BRs to pkgconfig provides
+- rebuild
+- clean up spec
+- removed mkrel, BuildRoot, clean section, defattr
+- removed .la files
+- disabled static build instead of deleting files
+
+* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 0.2.3-4
++ Revision: 666413
+- mass rebuild
+
+* Mon Sep 13 2010 Götz Waschk <waschk@mandriva.org> 0.2.3-3mdv2011.0
++ Revision: 577920
+- rebuild for new g-i
+
+* Fri Jul 30 2010 Funda Wang <fwang@mandriva.org> 0.2.3-2mdv2011.0
++ Revision: 563452
+- rebuild for new gobject-introspection
+
+* Sun Jul 11 2010 Götz Waschk <waschk@mandriva.org> 0.2.3-1mdv2011.0
++ Revision: 550843
+- new version
+- update file list
+
+* Fri Apr 23 2010 Götz Waschk <waschk@mandriva.org> 0.2.1-1mdv2010.1
++ Revision: 538176
+- new version
+- drop patch
+
+* Fri Mar 05 2010 Götz Waschk <waschk@mandriva.org> 0.2.0-1mdv2010.1
++ Revision: 514507
+- new version
+- new API
+- rediff patch
+- add introspection support
+- add gtk-doc files
+
+* Mon Jan 25 2010 Götz Waschk <waschk@mandriva.org> 0.1.0-1mdv2010.1
++ Revision: 495977
+- import memphis
+
