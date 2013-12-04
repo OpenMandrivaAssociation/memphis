@@ -53,6 +53,13 @@ Features:
  * Cairo rendering engine.
  * GObject based API. 
 
+%package -n %{devname}
+Summary:	Map rendering library
+Group:		Development/C
+Requires:	%{libname} = %{version}-%{release}
+Requires:	%{girname} = %{version}-%{release}
+Provides:	%{name}-devel = %{version}-%{release}
+
 %description -n %{devname}
 This package includes the development files for %{name}. 
 
@@ -62,13 +69,6 @@ Group:		System/Libraries
 
 %description -n %{girname}
 GObject Introspection interface description for %{name}.
-
-%package -n %{devname}
-Summary:	Map rendering library
-Group:		Development/C
-Requires:	%{libname} = %{version}-%{release}
-Requires:	%{girname} = %{version}-%{release}
-Provides:	%{name}-devel = %{version}-%{release}
 
 %prep
 %setup -q
