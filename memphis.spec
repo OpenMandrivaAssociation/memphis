@@ -7,7 +7,7 @@
 Summary:	Map rendering application and library
 Name:		memphis
 Version:	0.2.3
-Release:	9
+Release:	10
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://trac.openstreetmap.ch/trac/memphis/
