@@ -12,6 +12,11 @@ License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://trac.openstreetmap.ch/trac/memphis/
 Source0:	http://wenner.ch/files/public/mirror/memphis/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(glib-2.0)
